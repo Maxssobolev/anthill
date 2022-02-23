@@ -1,0 +1,8 @@
+@tailwind base;
+
+@layer base {
+    @font-face {
+        font-family: Montserrat;
+        font-display: fallback;
+    }
+}
