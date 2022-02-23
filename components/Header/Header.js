@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux'
 import Search from '../Search/Search'
 import ChangeCity from '../ChangeCity/ChangeCity'
 import ChangeLang from '../ChangeLang/ChangeLang'
+import HeaderCatalogDesktop from './Catalog/Desktop'
+import HeaderCatalogMobile from './Catalog/Mobile'
 //icons
 import BurgerIcon from '../../assets/img/burger-menu.svg'
 import TelegramIcon from '../../assets/img/telegram-icon.svg'
@@ -16,7 +18,7 @@ import FavouritesIcon from '../../assets/img/favourites-icon.svg'
 import CartIcon from '../../assets/img/cart-icon.svg'
 import LogoMobileIcon from '../../assets/img/logo-mobile.svg'
 import LogoIcon from '../../assets/img/logo.svg'
-import HeaderCatalogDesktop from './Catalog/Mobile'
+
 
 
 
@@ -197,8 +199,7 @@ export default function Header() {
                     items-center
                 "
             >
-                {/* HEADER MOBILE */}
-
+                <HeaderCatalogMobile />
                 <ChangeCity type='mobile' />
             </div>
         </header >
