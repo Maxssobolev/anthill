@@ -39,9 +39,9 @@ export default function Header() {
                             className="hover:fill-main-orange fill-white transition duration-500"
                         />
                     </Link>
-                    <Link href="/" className="ml-24" passHref>
+                    <Link href="/" passHref>
                         <WhatsappIcon
-                            className="hover:fill-main-orange fill-white transition duration-500"
+                            className=" ml-24 hover:fill-main-orange fill-white transition duration-500"
                         />
                     </Link>
                 </div>
@@ -128,6 +128,8 @@ export default function Header() {
                                 transition
                                 duration-500
                           "
+                            width="27"
+                            height="30"
                         />
 
                         <CartIcon
