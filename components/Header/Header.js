@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
-
 
 import { useSelector } from 'react-redux'
 
@@ -100,7 +98,7 @@ export default function Header() {
                         />
                     </Link>
 
-                    <a href="" className="desktop:ml-16 ml-8">
+                    <div className="desktop:ml-16 ml-8">
                         <CartIcon
                             className="
                                 hidden
@@ -124,7 +122,7 @@ export default function Header() {
                             width="16"
                             height="18"
                         />
-                    </a>
+                    </div>
                 </div>
             </div>
 

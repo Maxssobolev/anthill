@@ -1,6 +1,4 @@
 //styles
-import '../assets/scss/tailwindcss/base.scss';
-import "../assets/scss/tailwindcss/components.scss";
 import '../assets/scss/main.scss'
 
 
