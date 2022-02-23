@@ -11,6 +11,7 @@ import BurgerIcon from '../../assets/img/burger-menu.svg'
 import TelegramIcon from '../../assets/img/telegram-icon.svg'
 import WhatsappIcon from '../../assets/img/whatsapp-icon.svg'
 import ProfileIcon from '../../assets/img/profile-icon.svg'
+import ProfileMobileIcon from '../../assets/img/profile-mobile-icon.svg'
 import FavouritesIcon from '../../assets/img/favourites-icon.svg'
 import CartIcon from '../../assets/img/cart-icon.svg'
 import LogoMobileIcon from '../../assets/img/logo-mobile.svg'
@@ -20,7 +21,12 @@ import LogoIcon from '../../assets/img/logo.svg'
 
 export default function Header() {
     const menuList = [
-        { title: '', link: '' },
+        { title: 'О нас', link: '/' },
+        { title: 'Предложение', link: '/' },
+        { title: 'Возможности', link: '/' },
+        { title: 'Условия использования', link: '/' },
+        { title: 'Ответы на вопросы', link: '/' },
+        { title: 'Контакты', link: '/' },
     ]
     const user = useSelector(state => state.user)
 
@@ -43,13 +49,14 @@ export default function Header() {
 
             {/* ROW WITH SEARCH AND CATALOG */}
             <div className="container py-8 flex items-center justify-between">
-                <Link href="/" className="hidden desktop:flex" passHref>
-                    <LogoIcon />
+                <Link href="/" passHref>
+                    <LogoIcon className="hidden desktop:flex" />
                 </Link>
                 <div className="flex items-center desktop:w-full">
-                    <Link href="/" className="menu-mobile desktop:hidden" passHref>
+                    <Link href="/" passHref>
                         <BurgerIcon
                             className="
+                                menu-mobile desktop:hidden
                                 fill-main-black
                                 hover:fill-main-orange
                                 transition
@@ -67,29 +74,42 @@ export default function Header() {
                     </div>
                     <Search type='mobile' />
                 </div>
-                <Link href="/" className="desktop:hidden" passHref>
-                    <LogoMobileIcon />
+                <Link href="/" passHref>
+                    <LogoMobileIcon className="desktop:hidden" />
                 </Link>
                 <div className="flex items-center">
                     <Link
                         href={user.isAuth ? '/profile' : '/login'}
-                        className="desktop:mx-16 mx-8"
                         passHref
                     >
-                        <ProfileIcon
-                            className="
-                                hidden
-                                desktop:flex
+                        <span className="desktop:mx-16 mx-8">
+                            <ProfileIcon
+                                className="
+                                    hidden
+                                    desktop:flex
+                                    fill-main-black
+                                    hover:fill-main-orange
+                                    transition
+                                    duration-500
+                                "
+
+                            />
+                            <ProfileMobileIcon
+                                className="
+                                desktop:hidden
                                 fill-main-black
                                 hover:fill-main-orange
                                 transition
                                 duration-500
-                            "
-                        />
+                              "
+                            />
+                        </span>
+
                     </Link>
-                    <Link href="/" className="mx-16 hidden desktop:flex" passHref>
+                    <Link href="/" passHref>
                         <FavouritesIcon
                             className="
+                                mx-16 hidden desktop:flex
                                 fill-main-black
                                 hover:fill-main-orange
                                 transition
@@ -137,7 +157,10 @@ export default function Header() {
                                     <li key={`menu__item-${idx}`}>
                                         <Link
                                             href={itm.link}
-                                            className="
+                                            passHref
+                                        >
+                                            <span
+                                                className="
                                                 text-16
                                                 leading-19
                                                 text-main-black
@@ -146,9 +169,9 @@ export default function Header() {
                                                 font-gilroy font-medium
                                                 transition
                                                 duration-500
-                                            "
-                                        >
-                                            {itm.title}
+                                            ">
+                                                {itm.title}
+                                            </span>
                                         </Link>
                                     </li>
                                 )
