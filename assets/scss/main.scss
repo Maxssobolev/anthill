@@ -291,7 +291,7 @@
         display: block;
     }
 
-    @scren desktop {
+    @screen desktop {
         .section-banner .item {
             height: 377px;
         }
@@ -352,7 +352,7 @@ $menu-link-padding: 15px 30px;
 $breakpoint: 950px;
 $mega-menu-multiLevel-colWidth: 100 / 3 + 0;
 $mobile-menu-back-height: calc(1.4em + 40px);
-$mobile-menu-back-offset: calc(-1.4em + 40px);
+$mobile-menu-back-offset: calc(0px - calc(1.4em + 40px));
 $menu-mobile-width: 350px;
 
 
@@ -572,6 +572,7 @@ $menu-mobile-width: 350px;
                 width: 258px;
                 display: grid;
 
+
                 > [aria-haspopup="true"] {
                     ~ ul {
                         left: 258px;
@@ -591,6 +592,7 @@ $menu-mobile-width: 350px;
 
             li {
                 // FUNCTIONALITY: Opening flyouts
+
                 &:hover {
                     > [aria-haspopup="true"] {
                         ~ ul {

@@ -16,6 +16,7 @@ import FavouritesIcon from '../../assets/img/favourites-icon.svg'
 import CartIcon from '../../assets/img/cart-icon.svg'
 import LogoMobileIcon from '../../assets/img/logo-mobile.svg'
 import LogoIcon from '../../assets/img/logo.svg'
+import HeaderCatalogDesktop from './Catalog/Mobile'
 
 
 
@@ -65,7 +66,7 @@ export default function Header() {
                         />
                     </Link>
                     <div className="hidden items-center w-full justify-center desktop:flex">
-                        {/* HEADER DESKTOP */}
+                        <HeaderCatalogDesktop />
                         <Search />
                         <div className="flex items-center mx-24">
                             <ChangeCity />
